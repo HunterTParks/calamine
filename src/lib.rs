@@ -737,7 +737,7 @@ impl<'a, T: 'a + CellType> DoubleEndedIterator for UsedCells<'a, T> {
 }
 
 /// An iterator to read `Range` struct row by row
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Rows<'a, T: CellType> {
     inner: Option<std::slice::Chunks<'a, T>>,
 }

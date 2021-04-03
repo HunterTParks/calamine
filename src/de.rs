@@ -235,6 +235,7 @@ impl<'h, H: AsRef<str> + Clone + 'h> RangeDeserializerBuilder<'h, H> {
 ///     }
 /// }
 /// ```
+#[derive(Clone)]
 pub struct RangeDeserializer<'cell, T, D>
 where
     T: ToCellDeserializer<'cell>,
